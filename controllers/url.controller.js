@@ -23,6 +23,11 @@ async function generateNewShortURL(req, res) {
 
 async function handleGetAnalytics(req, res) {
   const shortId = req.params.shortId;
+
+  if (shortId === null) {
+    return res.status(400).json({ error: "ShortId is required" });
+  }
+
   const result = await Url.findOne({
     shortId,
   });
