@@ -6,8 +6,6 @@ async function generateNewShortURL(req, res) {
   const body = req.body;
 
   if (!body.url) {
-    // throw new ApiError(400, "URL is required");
-
     return res.status(400).json({ error: "url is required" });
   }
 

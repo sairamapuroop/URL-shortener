@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const urlSchema = new mongoose.Schema(
   {
@@ -19,4 +19,3 @@ const urlSchema = new mongoose.Schema(
 const Url = mongoose.model("Url", urlSchema);
 
 export default Url;
-
