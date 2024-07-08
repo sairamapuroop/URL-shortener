@@ -12,7 +12,7 @@ dotenv.config({
 
 const port = process.env.PORT || 3000;
 
-connectDB("mongodb://localhost:27017/short-url")
+connectDB(`${process.env.MONGODB_URI}${process.env.DB_NAME}`)
   .then(console.log("MongoDB connected"))
   .catch((err) => {
     console.log("MONGODB connection FAILED !!! ", err);
